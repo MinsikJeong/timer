@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Timer from "./components/Timer";
+import { Jumbotron, Row, Col, Container } from "react-bootstrap";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Jumbotron className="d-flex align-items-center min-vh-100" style={{backgroundColor:'black', height: 550, borderRadius: 0}}>
+      <Container>
+        <Row className="justify-content-md-center">
+          <Col md="auto">
+            <h1 style={{color:'white', textAlign: "center"}}>5분만 뛰자</h1>
+            <Timer isPlaying={true}/>
+          </Col>
+        </Row>
+      </Container>
+    </Jumbotron>
+
   );
 }
 
